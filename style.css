@@ -86,7 +86,7 @@ nav a:hover {
     padding: 60px 20px;
     text-align: center;
     color: #d66c00;
-    background-image: url('/img/patern.png');  /* Caminho da sua imagem */
+    background-image: url('patern.png');  /* Caminho da sua imagem */
     background-repeat: repeat;  /* Faz a imagem se repetir */
     background-size: 1515px;  /* Ajuste o tamanho da imagem */
 }
@@ -121,7 +121,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     background-color: #f09e00;
-    background-image: url('/img/patern-sol.png');  /* Caminho da sua imagem */
+    background-image: url('patern-sol.png');  /* Caminho da sua imagem */
     background-repeat: repeat;  /* Faz a imagem se repetir */
     background-size: 1000px;  /* Ajuste o tamanho da imagem */
 }
@@ -265,7 +265,7 @@ nav a:hover {
     padding: 60px 20px;
     text-align: center;
     color: #d66c00;
-    background-image: url('/img/patern.png');  /* Caminho da sua imagem */
+    background-image: url('patern.png');  /* Caminho da sua imagem */
     background-repeat: repeat;  /* Faz a imagem se repetir */
     background-size: 1515px;  /* Ajuste o tamanho da imagem */
 }
