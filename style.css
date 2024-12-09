@@ -1,4 +1,94 @@
 /* Reset básico */
+@media (max-width: 480px) {
+    /* Ajustes gerais no corpo */
+    body {
+        padding-top: 70px; /* Menor espaço para header fixo */
+    }
+
+    /* Header */
+    header {
+        height: 70px; /* Altura menor para header */
+    }
+
+    .header-content {
+        flex-direction: column;
+        padding: 0 20px; /* Reduz margens laterais */
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 1em; /* Fonte menor para links */
+    }
+
+    .nav-left, .nav-right {
+        margin: 5px 0;
+    }
+
+    header .logo img {
+        max-height: 40px; /* Reduz tamanho da logo */
+    }
+
+    /* Seção de Objetivo */
+    #objetivo h1 {
+        font-size: 1.8em; /* Reduz tamanho do título */
+    }
+
+    #objetivo p {
+        font-size: 1.2em; /* Reduz tamanho do texto */
+    }
+
+    /* Seção Quilombo */
+    #quilombo .content {
+        flex-direction: column; /* Empilha conteúdo */
+        padding: 0 10px; /* Adiciona margens laterais menores */
+    }
+
+    #quilombo .imagem img {
+        height: auto; /* Ajusta altura automaticamente */
+        margin-top: 20px; /* Espaço entre imagem e texto */
+    }
+
+    #quilombo .texto h2 {
+        font-size: 1.8em;
+    }
+
+    #quilombo .texto p {
+        font-size: 1.2em; /* Reduz tamanho do texto */
+    }
+
+    /* Grade de Receitas */
+    .grade-receitas {
+        grid-template-columns: 1fr; /* Apenas uma coluna */
+    }
+
+    .receita img {
+        height: 150px; /* Ajuste de altura */
+    }
+
+    .receita h3 {
+        font-size: 1.2em; /* Reduz tamanho do título */
+    }
+
+    /* Receita Detalhada */
+    #receita-detalhada .imagem-receita img {
+        width: 100%;
+        height: auto; /* Ajuste automático para largura */
+    }
+
+    #receita-detalhada h1 {
+        font-size: 2em; /* Título menor */
+    }
+
+    #receita-detalhada .descricao h2 {
+        font-size: 1.6em;
+    }
+
+    #receita-detalhada .descricao ul li, 
+    #receita-detalhada .descricao p {
+        font-size: 1em; /* Reduz texto da receita */
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
