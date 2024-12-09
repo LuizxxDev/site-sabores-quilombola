@@ -1,0 +1,338 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+    font-family: "Francois One", sans-serif;
+    background-color: #ffdab8;
+    padding-top: 80px; /* Adiciona espaço para o header fixo */
+}
+
+/* Header */
+header {
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffdab8; /* Cor de fundo do header */
+    height: 80px; /* Altura do header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+/* Conteúdo do Header */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaça os elementos */
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 300px; /* Espaçamento interno */
+}
+
+/* Logo */
+header .logo img {
+    margin-top: 20px;
+    max-height: 200px; /* Tamanho máximo da logo */
+    width: auto;
+}
+
+/* Navegação */
+nav a {
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #005935;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d66c00; /* Cor ao passar o mouse */
+}
+
+/* Links específicos */
+.nav-left {
+    margin-right: 100px; /* Empurra para a esquerda */
+}
+
+.nav-right {
+    margin-left: 100px; /* Empurra para a direita */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Empilha os elementos */
+        text-align: center;
+    }
+
+    .nav-left, .nav-right {
+        margin: 10px 0;
+    }
+
+    header .logo img {
+        margin: 10px 0;
+    }
+}
+
+/* Estilo para a seção de objetivo */
+#objetivo {
+    padding: 60px 20px;
+    text-align: center;
+    color: #d66c00;
+    background-image: url('/img/patern.png');  /* Caminho da sua imagem */
+    background-repeat: repeat;  /* Faz a imagem se repetir */
+    background-size: 1515px;  /* Ajuste o tamanho da imagem */
+}
+
+#objetivo .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#objetivo h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #005935; 
+}
+
+#objetivo p {
+    font-size: 1.4em;
+    line-height: 1.8;
+    color: #d66c00; /* Cor do texto */
+}
+
+#objetivo img {
+    max-height: 500px; /* Tamanho máximo da logo */
+    width: auto; /* Ajusta a largura proporcionalmente */
+}
+
+/* Estilo da seção Quilombo */
+#quilombo {
+    height: 670px;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f09e00;
+    background-image: url('/img/patern-sol.png');  /* Caminho da sua imagem */
+    background-repeat: repeat;  /* Faz a imagem se repetir */
+    background-size: 1000px;  /* Ajuste o tamanho da imagem */
+}
+
+#quilombo .content {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    align-items: center;
+    width: 100%;
+}
+
+#quilombo .texto {
+    flex: 1;
+}
+
+#quilombo .texto h2 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    color: #005935;
+}
+
+#quilombo .texto p {
+    font-size: 1.6em;
+    line-height: 1.8;
+    color: #a33602;
+    text-align: justify;
+}
+
+#quilombo .imagem {
+    flex: 1;
+    position: relative;
+}
+
+#quilombo .imagem img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o efeito */
+}
+
+#quilombo .imagem img:hover {
+    transform: scale(1.05); /* Aumenta o tamanho da imagem em 10% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar destaque */
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    #quilombo .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #quilombo .imagem {
+        margin-top: 20px; /* Espaço entre imagem e texto */
+    }
+
+    #quilombo .texto p {
+        font-size: 1.3em; /* Ajuste do tamanho do texto */
+    }
+
+    header .logo img {
+        max-height: 50px; /* Ajuste de tamanho para logo em telas menores */
+    }
+}
+
+#receitas {
+    padding: 50px 20px;
+}
+
+#receitas .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#receitas h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #005935;
+}
+
+/* Grade de receitas */
+.grade-receitas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas flexíveis */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza a grade */
+}
+
+/* Estilo das receitas individuais */
+.receita {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f09e00;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.receita:hover {
+    transform: translateY(-5px); /* Eleva a receita ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.receita a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+.receita img {
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+}
+
+.receita h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #005935;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grade-receitas {
+        grid-template-columns: 1fr; /* Apenas uma coluna em telas menores */
+    }
+
+    .receita img {
+        height: 150px; /* Ajusta a altura da imagem para telas pequenas */
+    }
+}
+
+/* Estilo para a receita detalhada */
+#receita-detalhada {
+    padding: 60px 20px;
+    text-align: center;
+    color: #d66c00;
+    background-image: url('/img/patern.png');  /* Caminho da sua imagem */
+    background-repeat: repeat;  /* Faz a imagem se repetir */
+    background-size: 1515px;  /* Ajuste o tamanho da imagem */
+}
+
+#receita-detalhada .imagem-receita img {
+    width: 100%;
+    max-width: 800px; /* Limita o tamanho da imagem */
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#receita-detalhada h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #005935;
+}
+
+#receita-detalhada .descricao {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#receita-detalhada .descricao h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #f09e00;
+}
+
+#receita-detalhada .descricao ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#receita-detalhada .descricao ul li {
+    color: #005935;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+#receita-detalhada .descricao p {
+    color: #005935;
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #receita-detalhada .imagem-receita img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #receita-detalhada h1 {
+        font-size: 2.2em;
+    }
+
+    #receita-detalhada .descricao h2 {
+        font-size: 1.8em;
+    }
+
+    #receita-detalhada .descricao ul li, #receita-detalhada .descricao p {
+        font-size: 1em;
+    }
+}
+
+
